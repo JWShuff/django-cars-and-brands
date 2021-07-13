@@ -34,6 +34,6 @@ class Car(models.Model):
     def __str__(self) -> str:
         return f"""
         Name: {self.name}
-        Brand: {self.brand}
-        Style: {self.style}
+        {self.brand}
+        {self.style}
         """

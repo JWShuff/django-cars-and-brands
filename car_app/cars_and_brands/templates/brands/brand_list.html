@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} BRANDS BRANDS BRANDS {% endblock  %}
+
+{% block content %}
+{% for brand in brands %}
+<div class='brand'>
+  <h4>
+    <a class='btn btn-success' href="{% url 'brand_detail' brand_id=brand.id %}">
+      {{ brand.name }}
+    </a>
+  </h4>
+</div>
+{% endfor %}
+{% endblock  %}
