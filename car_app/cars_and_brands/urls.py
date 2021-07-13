@@ -9,3 +9,9 @@
 # /brands / <: brand_id > /cars / <: car_id >  # see a specific car for a specific car brand
 # /brands / <: brand_id > /cars / <: car_id > /edit  # edit page for a specific car under a specific car brand
 # 
+
+from django.urls import path
+
+urlpatterns = [
+
+]

@@ -2,14 +2,38 @@ from django.db import models
 
 
 class Brand(models.Model):
-    pass
+    name = models.CharField(max_length=200)
+
+    def __str__(self) -> str:
+        return f"""
+        Brand: {self.name}
+        """
+
+
+class Style(models.Model):
+    type = models.CharField(max_length=200)
+
+    def __str__(self) -> str:
+        return f"""
+        Style: {self.type}
+        """
 
 
 class Car(models.Model):
     brand = models.ForeignKey(
         Brand,
         on_delete=models.CASCADE,
-        related_name='cars'
-    )
+        related_name='cars')
+    style = models.ForeignKey(
+        Style,
+        on_delete=models.CASCADE,
+        related_name='cars')
+
     name = models.CharField(max_length=200)
-    style = models.CharField(max_length=200)  # refactor to a category? SUV/Coupe/Etc?
+
+    def __str__(self) -> str:
+        return f"""
+        Name: {self.name}
+        Brand: {self.brand}
+        Style: {self.style}
+        """

@@ -1,0 +1,109 @@
+[
+  {
+    "model": "cars_and_brands.Brand",
+    "pk": 1,
+    "fields": {
+      "name": "Ford"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Brand",
+    "pk": 2,
+    "fields": {
+      "name": "Mazda"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Brand",
+    "pk": 3,
+    "fields": {
+      "name": "Toyota"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Style",
+    "pk": 1,
+    "fields": {
+      "type": "Sedan"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Style",
+    "pk": 2,
+    "fields": {
+      "type": "Coupe"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Style",
+    "pk": 3,
+    "fields": {
+      "type": "Van"
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 1,
+    "fields": {
+      "name": "Focus",
+      "brand": 1,
+      "style": 1
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 2,
+    "fields": {
+      "name": "Mustang",
+      "brand": 1,
+      "style": 2
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 3,
+    "fields": {
+      "name": "E350",
+      "brand": 1,
+      "style": 3
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 4,
+    "fields": {
+      "name": "Miata",
+      "brand": 2,
+      "style": 2
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 5,
+    "fields": {
+      "name": "Mazda 6",
+      "brand": 2,
+      "style": 1
+    }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 6,
+    "fields": {
+      "name": "Yaris",
+      "brand": 3,
+      "style": 1
+    }
+  }
+]
