@@ -16,6 +16,7 @@ urlpatterns = [
     # /brands / <: id > /edit  # edit page for a specific car brand
     path('<int:brand_id>/edit', views.edit_brand, name='edit_brand'),
     # /brands / <: brand_id > /cars  # a list of cars for a specific car brand
+    path('<int:brand_id>/delete/', views.delete_brand, name='delete_brand'),
     path('<int:brand_id>/cars', views.car_list, name='car_list'),
     # /brands / <: brand_id > /cars / new  # form for a new car under a specific car brand
     path('<int:brand_id>/cars/new/', views.new_car, name='new_car'),

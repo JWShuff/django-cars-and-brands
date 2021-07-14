@@ -7,17 +7,17 @@
   <br>
   <br>
   <br>
-  {% comment %} <form name="delete_brand" method="POST" action="{% url 'delete_brand' brand_id=brand.id %}">
-    {% csrf_token %}
-    <input type="submit" value="Delete brand" />
-  </form> {% endcomment %}
 </div>
-
-
 {% endblock  %}
+
+
 {% block bottom-nav %}
-  <a class = 'btn btn-outline-warning' href="{% url 'edit_brand' brand_id=brand.id %}">
+  <a class = 'nav-item btn btn-outline-warning' href="{% url 'edit_brand' brand_id=brand.id %}">
     Edit brand
   </a>
+     <form class='nav-item btn btn-ouline-danger' name="delete_brand" method="POST" action="{% url 'delete_brand' brand_id=brand.id %}">
+    {% csrf_token %}
+    <input type="submit" value="Delete brand" />
+  </form> 
 
 {% endblock  %}
