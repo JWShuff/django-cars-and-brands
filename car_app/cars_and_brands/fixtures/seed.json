@@ -21,7 +21,7 @@
     "fields": {
       "name": "Toyota"
     }
-  },
+  }, 
 
   {
     "model": "cars_and_brands.Style",

@@ -1,14 +1,23 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Brand, Style, Car
 
-# Create your views here.
+
+def get_brand(brand_id):
+    return Brand.objects.get(id=brand_id)
 
 def brands_list(request):
     brands = Brand.objects.all()
     return render(request, 'brands/brand_list.html', {'brands':brands})
 
 def brand_detail(request, brand_id):
-    return HttpResponse("New Brand WIP")
+    brand = get_brand(brand_id)
+    return render(request, 'brands/brand_detail.html', {'brand':brand})
+
+def delete_brand(request, brand_id):
+    if request.method=='POST':
+        brand=get_brand(brand_id)
+        brand.delete()
+    return redirect('brand_list')
 
 def new_brand(request):
     return HttpResponse("New Brand WIP")
