@@ -13,3 +13,10 @@
 </div>
 {% endfor %}
 {% endblock  %}
+
+{% block bottom-nav %}
+  
+<a class = 'nav-item btn btn-warning' href="{% url 'new_brand' %}">
+  New brand
+</a>
+{% endblock bottom-nav %}

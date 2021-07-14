@@ -4,9 +4,9 @@ from .models import Brand, Car
 class BrandForm(forms.ModelForm):
     class Meta:
         model = Brand
-        fields = ('name')
+        fields = ('name',)
 
-class BrandForm(forms.ModelForm):
+class CarForm(forms.ModelForm):
     class Meta:
         model = Car
         fields = ('name', 'style','brand')

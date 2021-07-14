@@ -105,5 +105,15 @@
       "brand": 3,
       "style": 1
     }
+  },
+
+  {
+    "model": "cars_and_brands.Car",
+    "pk": 7,
+    "fields": {
+      "name": "Sienna",
+      "brand": 3,
+      "style": 3
+    }
   }
 ]

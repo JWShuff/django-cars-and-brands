@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ type_of_request }} THE NEWEST AND COOLEST BRANDS {% endblock  %}
+
+{% block content %}
+<h2>{{ type_of_request }} Brand</h2>
+<form method="POST">{% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+
+{% endblock  %}
+
+{% block bottom-nav %}
+  
+<a class = 'nav-item btn btn-warning' href="{% url 'new_brand' %}">
+  New brand
+</a>
+{% endblock bottom-nav %}

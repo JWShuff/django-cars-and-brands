@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
 
+{% block title %} {{brand.name}} Overview {% endblock  %}
+
 {% block content %}
 <div>
   <h2>{{ brand.name }}</h2>
-
-  <br>
-  <br>
-  <br>
+  <hr/>
+  <div> 
+    {% for car in brand.cars.all %}
+      <li>
+        <a href="{% url 'car_detail' brand_id=brand.id car_id=car.id  %}"> 
+          {{ car }}
+        </a>
+      </li>
+    {% endfor %}
+  </div>
 </div>
 {% endblock  %}
 
 
 {% block bottom-nav %}
-  <a class = 'nav-item btn btn-outline-warning' href="{% url 'edit_brand' brand_id=brand.id %}">
+  <a class = 'nav-item btn btn-warning' href="{% url 'edit_brand' brand_id=brand.id %}">
     Edit brand
   </a>
-     <form class='nav-item btn btn-ouline-danger' name="delete_brand" method="POST" action="{% url 'delete_brand' brand_id=brand.id %}">
+  <form class='nav-item btn btn-outline-danger' name="delete_brand" method="POST" action="{% url 'delete_brand' brand_id=brand.id %}">
     {% csrf_token %}
-    <input type="submit" value="Delete brand" />
+    <input class='btn btn-danger' type="submit" value="Delete brand" />
   </form> 
-
 {% endblock  %}
